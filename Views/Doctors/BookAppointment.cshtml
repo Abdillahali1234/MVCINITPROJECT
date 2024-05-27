@@ -1,0 +1,18 @@
+﻿<div class="d-flex  gap-3 flex-wrap justify-content-center">
+    @{
+        foreach (var doctor in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="~/Images/@doctor.Img"  style="max-height:276px;object-fit:contain" class="card-img-top max-h-25" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@doctor.Name</h5>
+                    <p class="card-text">@doctor.Specialization</p>
+                        <div class="d-flex align-items-center gap-1">
+                        <a href="/Doctors/CompleteBookAppointment?DrName=@doctor.Name" class="btn btn-primary">Book</a>
+                        <a href="/Doctors/ShowBookAppointment?DrName=@doctor.Name" class="btn btn-primary">Appointments</a>
+                        </div>
+                </div>
+            </div>
+        }
+    }  
+</div>

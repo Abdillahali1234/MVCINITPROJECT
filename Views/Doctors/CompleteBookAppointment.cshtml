@@ -1,0 +1,21 @@
+﻿<h2>
+
+    Complete Appointment with @Model.Name
+</h2>
+@* asp-action="GetDataToPatient" method="post" *@
+<form action="/Doctors/GetDataToPatient" method="post">
+    <input type="hidden"  name="drName" value="@Model.Name" />
+    <div class="mb-3">
+        <label for="Name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="Name"  name="patientName" placeholder="Enter Your Name"required value="" />
+    </div>
+    <div class="mb-3">
+        <label for="date" class="form-label">Appointment Date</label>
+        <input type="date" class="form-control" id="date" placeholder="" name="date"required value=""/>
+    </div>
+    <div class="mb-3">
+        <label for="time" class="form-label">Appointment time</label>
+        <input type="time" class="form-control" id="time"   name="time"required value="" />
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Confirm Appointment</button>
+</form>
